@@ -3,6 +3,9 @@
 A responsive web implementation of the Harbour.Space Data Science Apprenticeship Program page, built as part of a practical development challenge.
 - Access Hosted Server: https://harbour-space-practical-challenge.netlify.app
 
+<img width="1920" height="1038" alt="image" src="https://github.com/user-attachments/assets/0035ced7-96e8-419f-bdd0-58fc8000b83c" />
+
+
 ## Features
 
 - Responsive layout for desktop and mobile.

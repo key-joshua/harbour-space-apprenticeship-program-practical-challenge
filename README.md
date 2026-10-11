@@ -1,6 +1,7 @@
 # Harbour.Space Apprenticeship Program — Practical Challenge
 
 A responsive web implementation of the Harbour.Space Data Science Apprenticeship Program page, built as part of a practical development challenge.
+- Access Hosted Server: https://harbour-space-practical-challenge.netlify.app
 
 ## Features
 

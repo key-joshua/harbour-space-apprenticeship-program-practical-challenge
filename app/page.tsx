@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect } from 'react'
+import Loading from "@/components/loading/loading"
 import { SiteHeader } from '@/components/layout/SiteHeader'
+import { FAQSection } from '@/components/sections/FAQSection'
+import { useScholarshipStore } from '@/store/scholarshipStore'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { ScholarshipSection } from '@/components/sections/ScholarshipSection'
 import { TestimonialSection } from '@/components/sections/TestimonialSection'
-import { FAQSection } from '@/components/sections/FAQSection'
-import { useScholarshipStore } from '@/store/scholarshipStore'
+
 
 export default function Page() {
   const fetchScholarship = useScholarshipStore( (state) => state.fetchScholarship );
@@ -19,7 +21,7 @@ export default function Page() {
 
   if (isLoading && !data) {
     console.log('Loading data!');
-    return (<main className="min-h-screen bg-white p-8"> Loading scholarship information... </main>);
+    return (<Loading />);
   }
 
   if (error && !data) {

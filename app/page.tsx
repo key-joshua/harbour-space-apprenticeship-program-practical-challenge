@@ -19,25 +19,23 @@ export default function Page() {
 
   useEffect(() => { fetchScholarship(); }, [fetchScholarship]);
 
-  if (isLoading && !data) {
-    console.log('Loading data!');
-    return (<Loading />);
-  }
+  if (!isLoading && data)
+    return (
+      <main id="main-content" className="min-h-screen bg-white">
+        <SiteHeader />
+        <HeroSection data={data} />
+        <AboutSection  data={data} />
+        <ScholarshipSection  data={data} />
+        <TestimonialSection  data={data} />
+        <FAQSection  data={data} />
+      </main>
+    )
 
-  if (error && !data) {
-    console.log('Found error!');
-    return ( <main className="min-h-screen bg-white p-8"> {error} </main> );
-  }
+  if (!isLoading && error && !data)
+    return (
+      <main className="min-h-screen bg-white p-8"> {error} </main>
+    );
 
-  return (
-    <main id="main-content" className="min-h-screen bg-white">
-      <SiteHeader />
-      <HeroSection data={data} />
-      <AboutSection  data={data} />
-      <ScholarshipSection  data={data} />
-      <TestimonialSection  data={data} />
-      <FAQSection  data={data} />
-    </main>
-  )
+  return (<Loading />);
 }
 

@@ -10,7 +10,7 @@ export function NavSkeleton() {
   return <nav className="relative flex h-10 items-center justify-between bg-[#6A5ACD] px-5" aria-label="Loading navigation">
     <div className="flex items-center gap-4"><Shimmer className="h-2 w-16 bg-white/60" /><Shimmer className="h-2 w-20 bg-white/40" /></div>
     <Shimmer className="h-3 w-5 bg-white/50" />
-    <Shimmer className="absolute -right-1 top-1 size-[72px] rounded-full bg-[#9bb7a7]" />
+    <Shimmer className="absolute right-30 top-2 hidden size-[72px] rounded-full bg-[#9bb7a7] md:block" />
   </nav>
 }
 
@@ -32,7 +32,7 @@ export function HeroSkeleton() {
       <div className="relative mb-5"><Shimmer className="h-7 w-[85%]" /><Shimmer className="mt-2 h-7 w-[60%]" /><span className="absolute -right-2 -top-5 size-20 rounded-full border border-neutral-200/70" /></div>
       <div className="flex flex-col gap-2"><Shimmer className="h-2 w-full" /><Shimmer className="h-2 w-[55%]" /></div>
       <div className="mt-10 flex flex-col gap-3"><Shimmer className="h-2 w-full" /><Shimmer className="h-2 w-full" /><Shimmer className="h-2 w-[95%]" /><Shimmer className="h-2 w-[70%]" /></div>
-      <Shimmer className="mt-8 h-2 w-[45%]" /><Shimmer className="mt-8 h-10 w-[113px] rounded-full" />
+      <Shimmer className="mt-8 h-2 w-[45%]" /><Shimmer className="mt-8 hidden h-10 w-[113px] rounded-full md:block" />
     </div>
     <div className="flex flex-col gap-5"><div className="flex items-center gap-3"><Shimmer className="size-8 rounded-full" /><div className="flex flex-col gap-2"><Shimmer className="h-2 w-16" /><Shimmer className="h-2 w-24" /></div></div><InfoCardsSkeleton /></div>
   </section>
@@ -45,6 +45,6 @@ export function AboutSkeleton() {
   </section>
 }
 
-export default function Loading() {
+export default function LoadingPage() {
   return <div aria-busy="true" aria-live="polite" className="min-h-screen overflow-hidden bg-white text-neutral-900"><span className="sr-only">Loading content…</span><NavSkeleton /><main><HeroSkeleton /><AboutSkeleton /></main></div>
 }
